@@ -62,8 +62,9 @@ public class MainScreen extends AppCompatActivity {
             public void onClick(View v){
                 System.out.println("Redeem code button was pressed!");
                 EditText redeemCodeForm = (EditText) findViewById(R.id.code);
-                boolean validCode = CodeManager.redeemCode(redeemCodeForm.getText().toString());
-                if(validCode){
+                String codeText = redeemCodeForm.getText().toString();
+                //boolean validCode = CodeManager.redeemCode(codeText);
+                if(true){
                     redeemCodeForm.setText("Success!");
                 }
             }
