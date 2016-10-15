@@ -7,7 +7,7 @@
 
     while($row = $result->fetch_assoc()){
         $keys = array_keys($row);
-        for($i = 0; $i < count($keys); $i += 1){
+        for($i = 0; $i < count($keys); $i++){
             echo $row[$keys[$i]] . " ";
         }
         echo "<br>";
