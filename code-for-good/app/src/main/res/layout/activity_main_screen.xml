@@ -12,25 +12,6 @@
     tools:context="team4.code_for_good.MainScreen">
 
     <Button
-        android:text="Donate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:drawableLeft="@drawable/give" />
-
-    <Button
-        android:text="About Us"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/button4"
-        android:layout_above="@+id/button3"
-        android:layout_centerHorizontal="true"
-        android:drawableLeft="@drawable/act" />
-
-    <Button
         android:text="Volunteer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,13 +22,30 @@
         android:drawableLeft="@drawable/join" />
 
     <Button
-        android:text="Game"
+        android:text="Donate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:drawableLeft="@drawable/give"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="About Us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:id="@+id/button4"
+        android:drawableLeft="@drawable/act"
+        android:layout_above="@+id/button3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/button5"
-        android:layout_above="@+id/button4"
-        android:layout_alignRight="@+id/button4"
-        android:layout_alignEnd="@+id/button4"
-        android:drawableLeft="@drawable/stalk" />
+        android:drawableLeft="@drawable/stalk"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
