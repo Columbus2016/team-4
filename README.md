@@ -10,3 +10,9 @@ Advertise Products
 
 Feeding America's Mission:
 To feed America’s hungry through a nationwide network of member food banks and engage our country in the fight to end hunger.
+
+Implementation of Project:
+Java
+SQL
+Json 
+PHP
