@@ -1,5 +1,4 @@
-# Feeding America (Code For Good: Colombus, OH)
+# Feeding America API (Code for Good)
 
-## Team 4:
-
+Test.
 
