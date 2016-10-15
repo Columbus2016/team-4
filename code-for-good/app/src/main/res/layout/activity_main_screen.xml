@@ -20,10 +20,19 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:text="About Us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/button4"
+        android:layout_above="@+id/button3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:text="Volunteer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="30dp"
         android:id="@+id/button3"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true" />
