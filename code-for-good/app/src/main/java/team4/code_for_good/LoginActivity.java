@@ -182,9 +182,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
-        UserManager.emailAndPasswordMatch(email, password);
 
-        boolean cancel = false;
+        boolean validLogin = UserManager.emailAndPasswordMatch(email, password);
+        if(validLogin){
+            setContentView(R.layout.activity_main_screen);
+        }
+
+        /*boolean cancel = false;
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
@@ -215,7 +219,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
-        }
+        }*/
     }
 
     private boolean isEmailValid(String email) {
