@@ -8,6 +8,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="team4.code_for_good.Aboutus">
 
+    <TextView
+        android:text="At Feeding America, 98 % of all donations raised go directly into programs and services for people in need. Thanks to your support, the Feeding America nationwide network of food banks, pantries and meal programs serves virtually every community in the United States—more than 46 million people including 12 million children and 7 million seniors.
+
+The Feeding America network provides over 4 billion meals to 1 in 8 Americans in need of healthy foods to help them live more secure and stable lives.
+
+How we are leading the charge to solve hunger:
+Supporting the nation’s largest network of food banks
+Reaching 46 million people in need
+Serving virtually every community in the United States
+Leading the way in hunger research
+Building powerful local and national partnerships
+Get involved in solving America’s hunger crisis.
+As the nation’s largest domestic hunger-relief organization, Feeding America is highly rated by Charity Navigator, the Better Business Bureau and the top accreditation organizations.
+
+Individuals, charities, businesses and government—we all have a role to play in helping families get meals that truly matter. Working together in communities across the country, we can solve hunger.
+
+Join Us in the Fight "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        tools:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

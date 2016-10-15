@@ -113,9 +113,6 @@
         android:textAlignment="textEnd"
         android:layout_alignBaseline="@+id/button7"
         android:layout_alignBottom="@+id/button7"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="6dp"
-        android:layout_marginEnd="6dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
