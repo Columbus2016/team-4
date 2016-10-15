@@ -28,13 +28,13 @@ import java.util.List;
  *
  */
 
-public class VaughnHttpEngine extends Thread implements Runnable {
+public class ProductEngine extends Thread implements Runnable {
 
     String urlStr = "http://www.vaughnsplayground.me/codeForGood/products.php";
     List<Product> products = null;
     volatile boolean done = false;
 
-    public VaughnHttpEngine() { super(); }
+    public ProductEngine() { super(); }
 
     public void run() {
         HttpURLConnection urlConnection = null;
@@ -99,6 +99,12 @@ public class VaughnHttpEngine extends Thread implements Runnable {
         done = true;
     }
 
+    public List<Product> retrieveProducts() {
+        this.start();
+        while (!done);
+        return products;
+    }
+
     private String readStream(InputStream in) {
         StringBuilder sb = new StringBuilder();
         try {
@@ -106,11 +112,5 @@ public class VaughnHttpEngine extends Thread implements Runnable {
             for (int c; (c = rdr.read()) != -1;) sb.append((char) c);
         } catch (IOException io) { io.printStackTrace(); }
         return sb.toString();
-    }
-
-    public List<Product> retrieveProducts() {
-        this.start();
-        while (!done);
-        return products;
     }
 }
