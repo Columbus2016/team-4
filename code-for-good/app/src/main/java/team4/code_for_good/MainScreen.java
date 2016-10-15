@@ -3,21 +3,33 @@ package team4.code_for_good;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainScreen extends AppCompatActivity {
 
     public Button button2, button3, button4;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_screen);
+        button2();
+        button3();
+        button4();
+    }
 
     public void button2() {
         button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toy = new Intent(MainScreen.this, Donate.class);
-                startActivity(toy);
+                setContentView(R.layout.activity_aboutus);
             }
         });
     }
@@ -27,8 +39,7 @@ public class MainScreen extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toy2 = new Intent(MainScreen.this, Volunteering.class);
-                startActivity(toy2);
+                setContentView(R.layout.activity_aboutus);
             }
         });
     }
@@ -56,14 +67,5 @@ public class MainScreen extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_screen);
-        button2();
-        button3();
-        button4();
     }
 }

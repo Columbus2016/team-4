@@ -187,6 +187,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         System.out.println("login check returned: " + validLogin);
         if(validLogin){
             setContentView(R.layout.activity_main_screen);
+            //Intent intent = new Intent(LoginActivity.this, MainScreen.class);
+            //startActivity(intent);
         }
     }
 
