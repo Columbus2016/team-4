@@ -19,7 +19,7 @@ public class UserManager {
             if(userEmail.equals(email)){
                 String userPassword = loginData.get(key).get("password");
                 if(userPassword.equals(password)){
-                    System.out.println("Success!!!!!!  Logging in... ");
+                    System.out.println("Success!!!!!!!  Logging in... ");
                     return true;
                 }
             }
