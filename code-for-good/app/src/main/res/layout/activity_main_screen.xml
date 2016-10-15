@@ -43,7 +43,7 @@
         android:textAlignment="textEnd" />
 
     <Button
-        android:text="About"
+        android:text="About Us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
