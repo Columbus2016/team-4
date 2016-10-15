@@ -32,10 +32,9 @@ public class VaughnHttpEngine extends Thread implements Runnable {
 
     String urlStr = "http://www.vaughnsplayground.me/codeForGood/products.php";
     List<Product> products = null;
+    volatile boolean done = false;
 
-    public VaughnHttpEngine() {
-        super();
-    }
+    public VaughnHttpEngine() { super(); }
 
     public void run() {
         HttpURLConnection urlConnection = null;
@@ -43,7 +42,7 @@ public class VaughnHttpEngine extends Thread implements Runnable {
             URL url = new URL(urlStr);
             urlConnection = (HttpURLConnection) url.openConnection();
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-            products = parseProductStream(in);
+            parseProductStream(in);
         } catch (Exception e) { e.printStackTrace();
         } finally { urlConnection.disconnect(); }
     }
@@ -54,8 +53,8 @@ public class VaughnHttpEngine extends Thread implements Runnable {
         while (itr.hasNext()) Log.i("info", itr.next().toString());
     }
 
-    private List<Product> parseProductStream(InputStream in) {
-        ArrayList<Product> retval = new ArrayList<Product>();
+    private void parseProductStream(InputStream in) {
+        products = new ArrayList<Product>();
         JsonReader reader = null;
         int numProducts = -1;
         try { reader = new JsonReader(new InputStreamReader(in, "UTF-8"));
@@ -87,7 +86,7 @@ public class VaughnHttpEngine extends Thread implements Runnable {
                         break;
                     case 3:
                         currProduct = new Product(currId, currName, currPointVal);
-                        retval.add(currProduct);
+                        products.add(currProduct);
                         currIndex = -1;
                         currentProduct++;
                         break;
@@ -97,7 +96,7 @@ public class VaughnHttpEngine extends Thread implements Runnable {
             reader.endArray();
             reader.endObject();
         } catch (IOException e) { e.printStackTrace(); }
-        return retval;
+        done = true;
     }
 
     private String readStream(InputStream in) {
@@ -109,7 +108,9 @@ public class VaughnHttpEngine extends Thread implements Runnable {
         return sb.toString();
     }
 
-    public void callAPI() {
+    public List<Product> retrieveProducts() {
         this.start();
+        while (!done);
+        return products;
     }
 }
