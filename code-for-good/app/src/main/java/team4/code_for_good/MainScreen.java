@@ -64,7 +64,7 @@ public class MainScreen extends AppCompatActivity {
                 EditText redeemCodeForm = (EditText) findViewById(R.id.code);
                 String codeText = redeemCodeForm.getText().toString();
                 //boolean validCode = CodeManager.redeemCode(codeText);
-                if(true){
+                if(codeText.equals("G5S47")){
                     redeemCodeForm.setText("Success!");
                 }
             }
