@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View v) {
                 Intent toy = new Intent(LoginActivity.this, MainScreen.class);
+                startActivity(toy);
             }
         });
     }
@@ -59,6 +60,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View v) {
                 Intent toy2 = new Intent(LoginActivity.this, SignUp.class);
+                startActivity(toy2);
             }
         });
     }

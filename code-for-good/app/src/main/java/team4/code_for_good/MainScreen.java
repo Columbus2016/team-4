@@ -16,6 +16,7 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent toy = new Intent(MainScreen.this, Donate.class);
+                startActivity(toy);
             }
         });
     }
@@ -26,6 +27,7 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent toy2 = new Intent(MainScreen.this, Volunteering.class);
+                startActivity(toy2);
             }
         });
     }
@@ -36,6 +38,7 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent toy3 = new Intent(MainScreen.this, Aboutus.class);
+                startActivity(toy3);
             }
         });
     }
