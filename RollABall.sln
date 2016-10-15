@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollABall.CSharp", "RollABall.CSharp.csproj", "{DBE49E52-8530-A0B4-98DF-06C493A0968E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "..\Visual Studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{BD112C2C-3D48-41F0-88D4-2F7BD1AF2773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBE49E52-8530-A0B4-98DF-06C493A0968E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE49E52-8530-A0B4-98DF-06C493A0968E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE49E52-8530-A0B4-98DF-06C493A0968E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE49E52-8530-A0B4-98DF-06C493A0968E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD112C2C-3D48-41F0-88D4-2F7BD1AF2773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD112C2C-3D48-41F0-88D4-2F7BD1AF2773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD112C2C-3D48-41F0-88D4-2F7BD1AF2773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD112C2C-3D48-41F0-88D4-2F7BD1AF2773}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
