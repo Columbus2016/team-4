@@ -4,8 +4,8 @@ include 'server.php';
 
   $result = $conn->query("SELECT * FROM PointsLookup;");
 
-  while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-      echo $row . "<br>";
+  while ($row = $result->fetch_assoc()) {
+      echo var_dump($row) . "<br>";
   }
 
   $result->close();
