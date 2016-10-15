@@ -104,13 +104,13 @@ public class ProductEngine extends Thread implements Runnable {
         while (!done);
         return products;
     }
-
-    private String readStream(InputStream in) {
-        StringBuilder sb = new StringBuilder();
-        try {
-            BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
-            for (int c; (c = rdr.read()) != -1;) sb.append((char) c);
-        } catch (IOException io) { io.printStackTrace(); }
-        return sb.toString();
-    }
 }
+
+//    private String readStream(InputStream in) {
+//        StringBuilder sb = new StringBuilder();
+//        try {
+//            BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
+//            for (int c; (c = rdr.read()) != -1;) sb.append((char) c);
+//        } catch (IOException io) { io.printStackTrace(); }
+//        return sb.toString();
+//    }
