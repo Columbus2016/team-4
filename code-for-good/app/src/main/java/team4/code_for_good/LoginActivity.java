@@ -41,7 +41,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
 
-    public Button email_sign_in_button;
+    public Button email_sign_in_button, button6;
 
     public void init() {
         email_sign_in_button = (Button) findViewById(R.id.email_sign_in_button);
@@ -49,6 +49,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View v) {
                 Intent toy = new Intent(LoginActivity.this, MainScreen.class);
+            }
+        });
+    }
+
+    public void init2() {
+        button6 = (Button) findViewById(R.id.button6);
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toy2 = new Intent(LoginActivity.this, SignUp.class);
             }
         });
     }
@@ -81,6 +91,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         init();
+        init2();
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
