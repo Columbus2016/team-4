@@ -184,6 +184,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         String password = mPasswordView.getText().toString();
 
         boolean validLogin = UserManager.emailAndPasswordMatch(email, password);
+        System.out.println("login check returned: " + validLogin);
         if(validLogin){
             setContentView(R.layout.activity_main_screen);
         }
