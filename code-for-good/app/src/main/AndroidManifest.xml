@@ -31,6 +31,7 @@
         <activity android:name=".Volunteering" />
         <activity android:name=".Donate" />
         <activity android:name=".Aboutus"></activity>
+        <activity android:name=".MainScreen"></activity>
     </application>
 
 </manifest>

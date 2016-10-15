@@ -22,6 +22,7 @@ public class MainScreen extends AppCompatActivity {
         button2();
         button3();
         button4();
+        redeemCode();
     }
 
     public void button2() {
@@ -29,7 +30,7 @@ public class MainScreen extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_aboutus);
+                //setContentView(R.layout.activity_aboutus);
             }
         });
     }
@@ -39,7 +40,7 @@ public class MainScreen extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_aboutus);
+                //setContentView(R.layout.activity_aboutus);
             }
         });
     }
