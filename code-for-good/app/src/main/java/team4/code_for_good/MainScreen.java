@@ -48,7 +48,7 @@ public class MainScreen extends AppCompatActivity {
         redeemButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                CodeManager.redeemCode("5XG35");
+                CodeManager.redeemCode("5XG36");
             }
         });
     }
