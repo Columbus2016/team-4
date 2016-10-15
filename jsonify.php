@@ -1,8 +1,9 @@
 <?php
 
 function to_json($result) {
-  echo "[";
   $num = $result->num_rows;
+  echo "{" . "\"size\":" . "\"" . $num . "\",\"body\":";
+  echo "[";
   for ($i = 0; $i < $num; $i++) {
     $row = $result->fetch_assoc();
     echo "{";
@@ -16,7 +17,7 @@ function to_json($result) {
     echo "}";
     if ($i != $num - 1) echo ",";
   }
-  echo "]";
+  echo "]}";
 }
 
 ?>
