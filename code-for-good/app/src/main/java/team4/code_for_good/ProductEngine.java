@@ -59,7 +59,7 @@ public class ProductEngine extends Thread implements Runnable {
         int numProducts = -1;
         try { reader = new JsonReader(new InputStreamReader(in, "UTF-8"));
         } catch (UnsupportedEncodingException e) { e.printStackTrace(); }
-        try {
+ 	try {
             reader.beginObject();
             reader.nextName();
             numProducts = reader.nextInt();

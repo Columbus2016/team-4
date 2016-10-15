@@ -12,6 +12,8 @@ import java.util.List;
 
 /**
  * Created by vkottler on 10/15/2016.
+ *
+ * Basically a clone of ProductEngine
  */
 
 public class UserEngine extends Thread implements Runnable {
