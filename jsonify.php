@@ -1,7 +1,7 @@
 <?php
 
 function to_json($result) {
-  echo "{";
+  echo "[";
   $num = $result->num_rows;
   for ($i = 0; $i < $num; $i++) {
     $row = $result->fetch_assoc();
@@ -16,7 +16,7 @@ function to_json($result) {
     echo "}";
     if ($i != $num - 1) echo ",";
   }
-  echo "}";
+  echo "]";
 }
 
 ?>
