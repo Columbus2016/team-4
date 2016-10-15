@@ -25,15 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="473dp">
 
-        <Button
-            android:id="@+id/button5"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/action_sign_in"
-            android:textStyle="bold" />
-
         <LinearLayout
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
@@ -85,8 +76,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
+                android:text="@string/action_sign_in_short"
                 android:textStyle="bold" />
+
+            <Button
+                android:text="Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button6"
+                android:textColor="?android:attr/textColorTertiary" />
 
         </LinearLayout>
     </ScrollView>
