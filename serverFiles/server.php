@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-
-
+$username = "JPhacker";
+$password = "JPhacker";
 $dbname = "codeForGood";
 $port = "3306";
 
