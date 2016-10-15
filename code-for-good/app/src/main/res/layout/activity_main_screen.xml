@@ -69,6 +69,21 @@
         android:layout_alignParentEnd="true"
         android:textAlignment="textEnd" />
 
+            <LinearLayout
+                android:id="@+id/redeem_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@android:color/background_light">
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
     <Button
         android:text="Redeem Code"
         android:layout_width="wrap_content"
@@ -78,10 +93,29 @@
         android:elegantTextHeight="false"
         android:gravity="center"
         android:textAlignment="textEnd"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="36dp"
         android:layout_below="@+id/button2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Code"
+        android:imeActionId="@+id/login"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionUnspecified"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textAlignment="textEnd"
+        android:layout_alignBaseline="@+id/button7"
+        android:layout_alignBottom="@+id/button7"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="6dp" />
+
 </RelativeLayout>
