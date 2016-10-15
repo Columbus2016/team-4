@@ -43,6 +43,16 @@ public class MainScreen extends AppCompatActivity {
         });
     }
 
+    public void redeemCode(){
+        Button redeemButton = (Button) findViewById(R.id.button7);
+        redeemButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                CodeManager.redeemCode("5XG35");
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
