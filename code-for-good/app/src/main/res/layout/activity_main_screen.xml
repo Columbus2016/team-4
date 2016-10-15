@@ -9,7 +9,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/forms"
-    tools:context="team4.code_for_good.MainScreen">
+    tools:context="team4.code_for_good.MainScreen"
+    android:layout_centerHorizontal="true"
+    android:textAlignment="viewStart">
 
     <Button
         android:text="Volunteer"
@@ -18,8 +20,12 @@
         android:layout_marginBottom="30dp"
         android:id="@+id/button3"
         android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:drawableLeft="@drawable/join" />
+        android:drawableLeft="@drawable/join"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd" />
 
     <Button
         android:text="Donate"
@@ -27,8 +33,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:drawableLeft="@drawable/give"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:elegantTextHeight="false"
+        android:gravity="center"
+        android:textAlignment="textEnd" />
 
     <Button
         android:text="About Us"
@@ -38,7 +50,11 @@
         android:id="@+id/button4"
         android:drawableLeft="@drawable/act"
         android:layout_above="@+id/button3"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd" />
 
     <Button
         android:text="Game"
@@ -47,5 +63,25 @@
         android:id="@+id/button5"
         android:drawableLeft="@drawable/stalk"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd" />
+
+    <Button
+        android:text="Redeem Code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:drawableLeft="@drawable/stalk"
+        android:elegantTextHeight="false"
+        android:gravity="center"
+        android:textAlignment="textEnd"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
