@@ -14,63 +14,66 @@
     tools:context="team4.code_for_good.SignUp"
     tools:showIn="@layout/activity_sign_up">
 
+    <ScrollView
+        android:id="@+id/sign_up_form_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="473dp">
 
-    <TextView
-        android:text="Sign Up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/firstName"
-        android:layout_alignStart="@+id/firstName"
-        android:layout_marginLeft="35dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="27dp"
-        android:id="@+id/signUp" />
+        <LinearLayout
+            android:id="@+id/sign_up_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="First Name:"
-        android:ems="10"
-        android:textColor="#ffffff"
-        android:id="@+id/firstName"
-        android:layout_above="@+id/email"
-        android:layout_centerHorizontal="true" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColorHint="@android:color/background_light">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Zip Code:"
-        android:ems="10"
-        android:id="@+id/zipCode"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="71dp"
-        android:layout_above="@+id/buttonSignUp"
-        android:layout_alignLeft="@+id/email"
-        android:layout_alignStart="@+id/email" />
+                <AutoCompleteTextView
+                    android:id="@+id/firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textColorHint="@android:color/background_light" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Email:"
-        android:ems="10"
-        android:id="@+id/email"
-        android:textColor="#ffffff"
-        android:layout_above="@+id/zipCode"
-        android:layout_alignLeft="@+id/firstName"
-        android:layout_alignStart="@+id/firstName" />
+            </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/background_light">
 
-    <Button
-        android:text="Submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonSignUp"
-        android:layout_marginBottom="153dp"
-        android:layout_above="@+id/signUp"
-        android:layout_centerHorizontal="true" />
+                <EditText
+                    android:id="@+id/zip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Zip Code"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/sign_up_form_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sign Up"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
