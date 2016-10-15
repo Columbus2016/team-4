@@ -1,0 +1,6 @@
+These files are located at www.vaughnsplayground.me/codeForGood/
+
+A GET request to login.php and products.php will result in pure JSON either rendered as html or 
+returned in the body of the request.
+
+Future scope would have optional parameters and more endpoints.
