@@ -24,4 +24,20 @@ public class DatabaseQuery{
 
         return userInfo;
     }
+
+    public static HashMap<Integer, HashMap<String, String>> getRedeemCodeData(){
+        HashMap<Integer, HashMap<String, String>> redeemCodes = new HashMap<Integer, HashMap<String, String>>();
+        redeemCodes.put(1, new HashMap<String, String>() {{ put("redeem_id", "5GXYZ"); put("product_name", "Cheerios"); }});
+        redeemCodes.put(2, new HashMap<String, String>() {{ put("redeem_id", "7K34T"); put("product_name", "Cheerios"); }});
+        redeemCodes.put(3, new HashMap<String, String>() {{ put("redeem_id", "8G894"); put("product_name", "Fig Newton"); }});
+        redeemCodes.put(4, new HashMap<String, String>() {{ put("redeem_id", "D9DKF"); put("product_name", "Smuckers Jelly"); }});
+        redeemCodes.put(5, new HashMap<String, String>() {{ put("redeem_id", "GOW56"); put("product_name", "Smuckers Peanut Butter"); }});
+        redeemCodes.put(6, new HashMap<String, String>() {{ put("redeem_id", "NB0B9"); put("product_name", "Garret Popcorn"); }});
+        redeemCodes.put(7, new HashMap<String, String>() {{ put("redeem_id", "IE920"); put("product_name", "Smuckers Jelly"); }});
+        redeemCodes.put(8, new HashMap<String, String>() {{ put("redeem_id", "NVOWD"); put("product_name", "Niagara Water"); }});
+        redeemCodes.put(9, new HashMap<String, String>() {{ put("redeem_id", "OJ039"); put("product_name", "Garret Popcorn"); }});
+        redeemCodes.put(10, new HashMap<String, String>() {{ put("redeem_id", "JMEB8"); put("product_name", "Garret Popcorn"); }});
+
+        return redeemCodes;
+    }
 }
