@@ -9,5 +9,5 @@
 
     to_json($result);
 
-    $rconn->close();
+    $conn->close();
  ?>
