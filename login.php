@@ -1,8 +1,7 @@
 <?php
     include 'server.php';
 
-    $sql = "SELECT *
-            FROM PersonalInfo";
+    $sql = "SELECT * FROM PersonalInfo";
 
     $result = $conn->query($sql);
 
@@ -14,5 +13,5 @@
         echo "<br>";
     }
 
-    $conn->close();
+    $result->close();
  ?>
