@@ -9,7 +9,7 @@ public class CodeManager {
         if(code.length() != 5){
             return false;
         }
-        
+
         //Get code data
         //Find product name and foreign key it with the ProductsInfo table to find the points value
         //Return it here
