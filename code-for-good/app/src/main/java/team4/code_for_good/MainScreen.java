@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -37,8 +38,7 @@ public class MainScreen extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toy3 = new Intent(MainScreen.this, Aboutus.class);
-                startActivity(toy3);
+                setContentView(R.layout.activity_aboutus);
             }
         });
     }
@@ -48,7 +48,12 @@ public class MainScreen extends AppCompatActivity {
         redeemButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                CodeManager.redeemCode("5XG36");
+                System.out.println("Redeem code button was pressed!");
+                EditText redeemCodeForm = (EditText) findViewById(R.id.code);
+                boolean validCode = CodeManager.redeemCode(redeemCodeForm.getText().toString());
+                if(validCode){
+                    redeemCodeForm.setText("Success!");
+                }
             }
         });
     }
