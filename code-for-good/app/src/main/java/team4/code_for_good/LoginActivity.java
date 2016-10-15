@@ -3,6 +3,7 @@ package team4.code_for_good;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -39,6 +40,31 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
+
+    public Button email_sign_in_button, button6;
+
+    public void init() {
+        email_sign_in_button = (Button) findViewById(R.id.email_sign_in_button);
+        email_sign_in_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toy = new Intent(LoginActivity.this, MainScreen.class);
+                startActivity(toy);
+            }
+        });
+    }
+
+    public void init2() {
+        button6 = (Button) findViewById(R.id.button6);
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toy2 = new Intent(LoginActivity.this, SignUp.class);
+                startActivity(toy2);
+            }
+        });
+    }
+
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -66,6 +92,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        init();
+        init2();
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
