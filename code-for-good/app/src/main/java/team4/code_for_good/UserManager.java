@@ -13,6 +13,19 @@ public class UserManager {
         System.out.println("EMAIL: " + email + ", PASSWORD: " + password);
         HashMap<Integer, HashMap<String, String>> loginData = DatabaseQuery.getLoginData();
 
+        for(Integer key: loginData.keySet()){
+            String userEmail = loginData.get(key).get("email");
+            System.out.println("Email: " + userEmail);
+            if(userEmail.equals(email)){
+                String userPassword = loginData.get(key).get("password");
+                if(userPassword.equals(password)){
+                    System.out.println("Success!  Logging in... ");
+                    return true;
+                }
+            }
+        }
+
+        System.out.println("Failed attempt to login");
         return true;
     }
 }
