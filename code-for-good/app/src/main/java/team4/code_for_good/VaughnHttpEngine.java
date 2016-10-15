@@ -1,4 +1,4 @@
-package me.vaughnsplayground.apitester;
+package team4.code_for_good;
 
 import android.util.JsonReader;
 import android.util.Log;
@@ -31,7 +31,6 @@ import java.util.List;
 public class VaughnHttpEngine extends Thread implements Runnable {
 
     String urlStr = "http://www.vaughnsplayground.me/codeForGood/products.php";
-    String body = null;
     List<Product> products = null;
 
     public VaughnHttpEngine() {
@@ -44,13 +43,15 @@ public class VaughnHttpEngine extends Thread implements Runnable {
             URL url = new URL(urlStr);
             urlConnection = (HttpURLConnection) url.openConnection();
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-            //body = readStream(in);
-            //Log.i("info", body);
             products = parseProductStream(in);
-            Iterator<Product> itr = products.iterator();
-            while (itr.hasNext()) Log.i("info", itr.next().toString());
         } catch (Exception e) { e.printStackTrace();
         } finally { urlConnection.disconnect(); }
+    }
+
+    public void printProducts() {
+        if (products == null) return;
+        Iterator<Product> itr = products.iterator();
+        while (itr.hasNext()) Log.i("info", itr.next().toString());
     }
 
     private List<Product> parseProductStream(InputStream in) {
@@ -101,7 +102,8 @@ public class VaughnHttpEngine extends Thread implements Runnable {
 
     private String readStream(InputStream in) {
         StringBuilder sb = new StringBuilder();
-        try (BufferedReader rdr = new BufferedReader(new InputStreamReader(in))) {
+        try {
+            BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
             for (int c; (c = rdr.read()) != -1;) sb.append((char) c);
         } catch (IOException io) { io.printStackTrace(); }
         return sb.toString();
