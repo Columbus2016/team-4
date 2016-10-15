@@ -5,7 +5,7 @@ package team4.code_for_good;
  */
 
 public class UserModel {
-    
+
     public int    user_id, zip_code, user_point_value;
     public String email, password;
 
@@ -31,6 +31,11 @@ public class UserModel {
     }
     public String getPassword(){
         return password;
+    }
+
+    @Override
+    public String toString() {
+        return user_id + ": " + email + " " + user_point_value + " " + zip_code;
     }
 
 }
